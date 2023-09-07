@@ -30,7 +30,7 @@
   </script>
  <body class=" dark:bg-black h-screen dark:text-white antialiased">
   <!-- The rest of your HTML -->
-  <main class="p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
+  <main class="animate-fade-right p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
     <h1 class="m-6 title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"> {$page.params.slug}</h1>
     <div class="mt-4 text-xl sm:text-xl md:text-xl lg:text-2xl xl:text-3xl">
       {$currentBlog}
