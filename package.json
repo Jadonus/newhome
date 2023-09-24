@@ -23,6 +23,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"globe.gl": "^2.29.3",
 		"marked": "^8.0.1",
 		"tailwindcss-animated": "^1.0.1"
 	}
