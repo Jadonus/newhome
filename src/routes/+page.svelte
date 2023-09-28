@@ -32,69 +32,19 @@
     at this. My goal as a web developer is to be able to make the best websites
     possible.
   </p>
+
   <div class=" bg-purple-600 relative">
-    <svg
-      class="lg:m-24 xl:m-24 mt-12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/4"
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      xmlns:svgjs="http://svgjs.dev/svgjs"
-      viewBox="250 250 350 325"
-      ><defs
-        ><radialGradient id="sssurface-grad-dark" r="75%" cx="20%" cy="20%">
-          <stop offset="0%" stop-color="#000" stop-opacity="0" />
-          <stop offset="100%" stop-color="#000000" stop-opacity="1" />
-        </radialGradient><radialGradient
-          id="sssurface-grad-light"
-          r="25%"
-          cx="30%"
-          cy="30%"
-        >
-          <stop offset="0%" stop-color="#555555" stop-opacity="0.75" />
-          <stop offset="100%" stop-color="#000" stop-opacity="0" />
-        </radialGradient><filter
-          id="sssurface-blur"
-          x="-100%"
-          y="-100%"
-          width="400%"
-          height="400%"
-          filterUnits="objectBoundingBox"
-          primitiveUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
-        >
-          <feGaussianBlur
-            stdDeviation="30"
-            x="0%"
-            y="0%"
-            width="100%"
-            height="100%"
-            in="SourceGraphic"
-            edgeMode="none"
-            result="blur"
-          /></filter
-        ></defs
-      ><g
-        ><ellipse
-          rx="150"
-          ry="75"
-          cx="450"
-          cy="500"
-          fill="#000000"
-          opacity="0.25"
-          filter="url(#sssurface-blur)"
-        /><circle r="150" cx="400" cy="400" fill="#000000" /><circle
-          r="150"
-          cx="400"
-          cy="400"
-          fill="url(#sssurface-grad-dark)"
-        /><circle
-          r="150"
-          cx="400"
-          cy="400"
-          fill="url(#sssurface-grad-light)"
-        /></g
-      ></svg
-    >
+   <svg xmlns="http://www.w3.org/2000/svg"
+   
+      class="  mt-12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/4"
+   version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"><defs><radialGradient id="sssurface-grad-dark" r="75%" cx="20%" cy="20%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"></stop>
+      <stop offset="100%" stop-color="#000000" stop-opacity="1"></stop>
+    </radialGradient><radialGradient id="sssurface-grad-light" r="25%" cx="30%" cy="30%">
+    <stop offset="0%" stop-color="#2c2c2c" stop-opacity="0.75"></stop>
+    <stop offset="100%" stop-color="#000" stop-opacity="0"></stop>
+  </radialGradient><filter id="sssurface-blur" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+	<feGaussianBlur stdDeviation="63" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g><ellipse rx="150" ry="75" cx="510" cy="500" fill="#000000" opacity="1" filter="url(#sssurface-blur)"></ellipse><circle r="150" cx="400" cy="400" fill="#000000"></circle><circle r="150" cx="400" cy="400" fill="url(#sssurface-grad-dark)"></circle><circle r="150" cx="400" cy="400" fill="url(#sssurface-grad-light)"></circle></g></svg>
   </div>
 </div>
 
