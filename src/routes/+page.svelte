@@ -1,10 +1,22 @@
 <script lang="ts">
   import "../app.css";
+  import { onMount } from "svelte";
 
-  let bootstrap =
-    "First of all, this is my opinion. Someone may think differently than me, and that is ok. Bootstrap is amazing for new web developers. It looks good out of the box. Check. It is Extremely good at making responsize websites. Check. It is accesable for everyone, with amazing documention and a massive userbase. Check. But here is where it goes wrong. Bootstrap is simply not customizable. Their color pallete is good, and with the semi recent release of Bootstrap 5, it has gotten better, but it does not have the flexibility like regular css. Don't get me wrong, I have some things to say about that too, but in regards to color, that is where regular css wins. In my opinion, what this website is built on uses what is the perfect balence between the two: Tailwind CSS. Tailwind still has a limited color pallete, but much less than Bootstrap. Tailwind's downside is no prebuilt items, like spinners, cards, buttons, etc. Instead of using the prebuilt items provided by Bootstrap, you get to make your own. This allows for flexibility and creativity at the expense of speed. I think that at the end of the day, Boostrap has its strengths, but Tailwind is my favorite. For now.";
-  let bootstrap20 =
-    "First of all, this is my opinion. Someone may think differently than me, and that is ok. Bootstrap";
+  onMount(() => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const fullscreenMenu = document.querySelector(".fullscreen-menu");
+    const menu = document.querySelector(".menu");
+    menuToggle.addEventListener("click", () => {
+      fullscreenMenu.classList.toggle("hidden"); // Toggle the 'hidden' class to show/hide the menu
+    });
+    menu.addEventListener("click", () => {
+      fullscreenMenu.classList.toggle("hidden"); // Toggle the 'hidden' class to show/hide the menu
+    });
+  });
+
+  // Open your fullscreen menu here
+  // You can use CSS classes to control the visibility or animation of the menu
+  // For example, you could add a class to your menu element to make it fullscreen
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,12 +25,24 @@
   href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
   rel="stylesheet"
 />
-<link href="https://fonts.cdnfonts.com/css/atakana-sarif" rel="stylesheet" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<div class="h-screen bg-purple-600">
+<div
+  class="fullscreen-menu h-screen hidden bg-black menu transition ease-in-out menu"
+>
+  <div class="flex flex-col justify-center items-start h-screen">
+    <a
+      class="text-4xl m-12 break-words sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl mb-4 animate-fade-right"
+      href="/portfolio">Portfolio</a
+    >
+    <a
+      class="text-4xl sm:text-6xl m-12 break-words md:text-7xl lg:text-8xl xl:text-9xl animate-fade-right animate-delay-100"
+      href="/blog">Blog</a
+    >
+  </div>
+</div>
+<div class="h-screen grain">
   <h1
-    class="pt-12 m-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+    class="pt-12 mx-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
   >
     In case you couldn't tell, I am inspired by <span
       class="dark:text-black text-white ani">minimalism</span
@@ -32,28 +56,76 @@
     at this. My goal as a web developer is to be able to make the best websites
     possible.
   </p>
-
-  <div class=" bg-purple-600 relative">
-   <svg xmlns="http://www.w3.org/2000/svg"
-   
-      class="  mt-12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/4"
-   version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"><defs><radialGradient id="sssurface-grad-dark" r="75%" cx="20%" cy="20%">
-      <stop offset="0%" stop-color="#000" stop-opacity="0"></stop>
-      <stop offset="100%" stop-color="#000000" stop-opacity="1"></stop>
-    </radialGradient><radialGradient id="sssurface-grad-light" r="25%" cx="30%" cy="30%">
-    <stop offset="0%" stop-color="#2c2c2c" stop-opacity="0.75"></stop>
-    <stop offset="100%" stop-color="#000" stop-opacity="0"></stop>
-  </radialGradient><filter id="sssurface-blur" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-	<feGaussianBlur stdDeviation="63" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g><ellipse rx="150" ry="75" cx="510" cy="500" fill="#000000" opacity="1" filter="url(#sssurface-blur)"></ellipse><circle r="150" cx="400" cy="400" fill="#000000"></circle><circle r="150" cx="400" cy="400" fill="url(#sssurface-grad-dark)"></circle><circle r="150" cx="400" cy="400" fill="url(#sssurface-grad-light)"></circle></g></svg>
+  <div class="animate-fade-right relative">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class=" menu-toggle mt-12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/4 animate-delay-1.5s transition hover:scale-110"
+      version="1.1"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:svgjs="http://svgjs.dev/svgjs"
+      viewBox="0 0 800 800"
+      ><defs
+        ><radialGradient id="sssurface-grad-dark" r="75%" cx="20%" cy="20%">
+          <stop offset="0%" stop-color="#000" stop-opacity="0" />
+          <stop offset="100%" stop-color="#000000" stop-opacity="1" />
+        </radialGradient><radialGradient
+          id="sssurface-grad-light"
+          r="25%"
+          cx="30%"
+          cy="30%"
+        >
+          <stop offset="0%" stop-color="#2c2c2c" stop-opacity="0.75" />
+          <stop offset="100%" stop-color="#000" stop-opacity="0" />
+        </radialGradient><filter
+          id="sssurface-blur"
+          x="-100%"
+          y="-100%"
+          width="400%"
+          height="400%"
+          filterUnits="objectBoundingBox"
+          primitiveUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feGaussianBlur
+            stdDeviation="63"
+            x="0%"
+            y="0%"
+            width="100%"
+            height="100%"
+            in="SourceGraphic"
+            edgeMode="none"
+            result="blur"
+          /></filter
+        ></defs
+      ><g
+        ><ellipse
+          rx="150"
+          ry="75"
+          cx="510"
+          cy="500"
+          fill="#000000"
+          opacity="1"
+          filter="url(#sssurface-blur)"
+        /><circle r="150" cx="400" cy="400" fill="#000000" /><circle
+          r="150"
+          cx="400"
+          cy="400"
+          fill="url(#sssurface-grad-dark)"
+        /><circle
+          r="150"
+          cx="400"
+          cy="400"
+          fill="url(#sssurface-grad-light)"
+        /></g
+      ></svg
+    >
   </div>
 </div>
 
 <body class="dark:bg-black dark:text-white antialiased">
   <main class="animate-fade-right p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
-    <h1
-      class=" m-6 title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
-    >
-      Who I am.
+    <h1 class=" title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+      What I do.
     </h1>
     <p
       class="mt-4 pb-24 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
@@ -78,9 +150,8 @@
   >
     Contact Me
   </h1>
-    <form action="https://api.staticforms.xyz/submit" method="post">
-     
-<div class="m-12">
+  <form action="https://api.staticforms.xyz/submit" method="post">
+    <div class="m-12">
       <input
         class="m-2 dark:bg-black bg-white border-bottom border-b-4 mt-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5x"
         type="text"
@@ -118,19 +189,15 @@
         type="submit"
         value="Submit"
       />
-    </form>
+    </div>
+  </form>
 
-    <p class="">Made with ❤️ by Jadon Gearhart - 2023</p>
-  </body
->
+  <p class="text-center">Made with ❤️ by Jadon Gearhart - 2023</p>
+</body>
 
 <style>
   main {
     font-family: "Poppins", sans-serif;
-  }
-
-  .title {
-    font-family: "Atakana Sarif", Georgia;
   }
 
   @keyframes fade {
@@ -146,5 +213,8 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate; /* This is the magical line! */
+  }
+  .grain {
+    background-image: url("svg.svg");
   }
 </style>

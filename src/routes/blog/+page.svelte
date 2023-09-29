@@ -15,7 +15,7 @@ let bootstrap20 =  "First of all, this is my opinion. Someone may think differen
 
 <body class=" dark:bg-black h-screen dark:text-white antialiased">
     <main class=" animate-fade-right p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
-        <h1 class=" m-6 title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"> Blog</h1>
+        <a class=" m-6  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" href="/"> Blog</a>
         <p class="mt-4  text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
             
             <a class="underline decoration-purple-500 hover:bg-purple-500 transition ease-in-out duration-300" href="/blog/bootstrap">Bootstrap: my opinion<br></a>
