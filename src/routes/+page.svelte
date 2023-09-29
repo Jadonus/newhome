@@ -56,10 +56,10 @@
     at this. My goal as a web developer is to be able to make the best websites
     possible.
   </p>
-  <div class=" m-24 animate-fade-right relative">
+  <div class=" animate-fade-right relative">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="  m-24 menu-toggle mt-12 absolute top-1/2 left-1/3 transform -translate-x-1/2 -translate-y-1/4 animate-delay-1.5s transition hover:scale-110"
+      class="  menu-toggle mt-12 absolute top-1/2 left-1/3 transform -translate-x-1/2 -translate-y-1/4 animate-delay-1.5s transition hover:scale-110"
       version="1.1"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       xmlns:svgjs="http://svgjs.dev/svgjs"
