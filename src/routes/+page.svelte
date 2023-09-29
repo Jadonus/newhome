@@ -40,7 +40,7 @@
     >
   </div>
 </div>
-<div class="h-screen grain">
+<div class="h-screen bg-purple-600">
   <h1
     class="pt-12 mx-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
   >
@@ -56,10 +56,10 @@
     at this. My goal as a web developer is to be able to make the best websites
     possible.
   </p>
-  <div class="animate-fade-right relative">
+  <div class=" m-24 animate-fade-right relative">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class=" menu-toggle mt-12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/4 animate-delay-1.5s transition hover:scale-110"
+      class="  m-24 menu-toggle mt-12 absolute top-1/2 left-1/3 transform -translate-x-1/2 -translate-y-1/4 animate-delay-1.5s transition hover:scale-110"
       version="1.1"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       xmlns:svgjs="http://svgjs.dev/svgjs"
@@ -213,8 +213,5 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate; /* This is the magical line! */
-  }
-  .grain {
-    background-image: url("svg.svg");
   }
 </style>
